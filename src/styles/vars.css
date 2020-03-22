@@ -1,0 +1,34 @@
+:root {
+    --smallest: 1px;
+    --sml: 2px;
+    --smlMed: 4px;
+    --med: 10px;
+    --medLrg: 15px;
+    --lrg: 35px;
+    --vlrg: 125px;
+    --mainWidth: 40%;
+
+    --mainHue: 190;
+    --mainSat: 90%;
+    --mainLig: 60%;
+    --mainFadedSat: 30%;
+    --mainFadedLig: 30%;
+    
+    --mainCol: hsl(var(--mainHue), var(--mainSat), var(--mainLig));
+    --mainColDark: hsl(var(--mainHue), var(--mainSat), 20%);
+    --mainColDarkest: hsl(var(--mainHue), var(--mainSat), 15%);
+    --mainColTrans: rgb(89, 153, 166, 0.7);
+    --mainCompCol: hsl(calc(var(--mainHue) + 180), var(--mainSat), var(--mainLig));
+    --mainCompColDark: hsl(calc(var(--mainHue) + 180), var(--mainSat), 30%);
+    --mainCompColDarkest: hsl(calc(var(--mainHue) + 180), var(--mainSat), 15%);
+
+    --syntaxBackground: rgb(19, 19, 19);
+
+    --monochromeText: rgb(124, 212, 73);
+    --highlight: hsl(calc(var(--mainHue) + 120), calc(var(--mainSat) + 70), 70%);
+    --faded: rgb(231, 231, 231);
+    --fadedDarker: rgb(126, 126, 126);
+    --fadedDark: hsl(22, 96%, 45%);
+    --darkest: rgb(29, 28, 28);
+    --lightest: rgb(255, 255, 255);
+}

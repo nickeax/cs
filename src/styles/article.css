@@ -1,0 +1,58 @@
+.article {
+    font-size: 1rem;
+    position: relative;
+    /* margin-top: 2rem; */
+}
+
+.article-header {
+    font-family: "Open Sans";
+
+    width: 100%;
+    
+    border-bottom: 2px solid var(--mainColDark);
+    
+    margin: auto;
+    margin: 2rem 0;
+    padding: var(--med) var(--med);
+}
+
+.article-sub {
+    text-align: left;
+    color: var(--mainCompCol);
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.article-title {
+    color: var(--mainColDarkest);
+    font-size: 3rem;
+    font-weight: 1000;
+
+    padding-top: var(--med);
+    padding-bottom: var(--med);
+}
+
+.article-content {
+    color: var(--mainColDark);
+    font-weight: normal;
+    /* padding: var(--lrg) var(--vlrg); */
+}
+
+.article-content h3 {
+    display: block;
+    
+    color: var(--mainCompColDark);
+
+    font-weight: 100;
+
+    border-radius: var(--sml);
+
+    margin: 3rem 0rem 0.2rem 0rem;
+    width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+    .article-content {
+        padding: var(--sml);
+    }
+}

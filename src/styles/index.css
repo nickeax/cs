@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import 'vars.css';
+@import 'reset.css';
+@import 'menu.css';
+@import 'article.css';
+@import 'syntax.css';
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans';
+    line-height: 1.6;
+    background-color: var(--faded);
+    margin-top: 10rem;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+
+    background-color: var(--faded);
+
+    box-shadow: 0 2px  2px rgba(0, 0, 0, 0.2);
+    z-index: 666;
+}
+footer {
+    /* background-color: var(--mainCompCol); */
+    box-shadow: 0 -2px  2px rgba(0, 0, 0, 0.2);
+    
+    min-height: 10rem;
+}
+
+
+strong {
+    font-weight: 600;
+}
+
+p {
+	margin-bottom: 1.3rem;
+}
+
+.zoomControls, .zoomControl {
+    display: inline-block;
+    background-color: rgb(218, 218, 218);
+
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 4px;
+
+    padding: 2px;
+    margin-bottom: 1rem;
+}
+
+.zoomControls {
+    margin-left: 5rem;
+}
+
+.zoomControl {
+    color: rgb(99, 54, 0);
+    font-size: 1.0rem;
+    text-decoration: none;
+}
+
+.zoomControl:hover {
+    cursor: pointer;
+    color: rgb(255, 176, 80);
+}
+
+.zoomControl:active {
+    font-size: 1.2rem;
+}
+
+.hcontainer {
+    display: flex;
+    width: 60%;
+    height: 5rem;
+    margin: auto;
+}
+
+.fcontainer {
+    display: flex;
+    width: 60%;
+    height: 5rem;
+    margin: auto;
+}
+
+.container {
+    width: var(--mainWidth);
+    min-height: 150vh;
+    margin: auto;
+    margin-top: 5rem;
+    z-index: -666;
+}
+
+.anchor a {
+    position: absolute;
+    left: 0;
+    top: -110px;
+}
+
+.anchor {
+    position: relative;
+}
+
+tt.tt-filename {
+    padding: 2px;
+    border-radius: var(--smlMed);
+}
+
+tt a {
+    font-weight: 500;
+    color: var(--mainCompColDarkest);
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        font-size: 0.8rem;
+        width: 100%;
+        margin: 3px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        font-size: 0.8rem;
+        width: 100%;
+        margin: 3px;
+    }
+}
+
+.output {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: auto;
+    margin: 2rem 0 1rem 0;
+
+}
+
+.row {
+    background-color: var(--mainColDarkest);
+
+    border-bottom: 1px solid #eee;
+}
+
+.item {
+    display: inline-block;
+    width: 33.32%;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    background-color: #eee;
+    color: var(--mainColDarkest);
+    text-align: center;
+}
+
+
+table {
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border: 1px solid var(--mainCompCol);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+td {
+    background-color:  #eee;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+td.on {
+    background-color:  rgba(126, 236, 22, 0.877);
+}
+
+td.off {
+    background-color:  rgb(221, 85, 85);
+}
+
+tr {
+    border-bottom: 1px solid var(--mainColDarkest);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.item.bold {
+    color: var(--mainColDarkest);
+    background-color: #ddd;
+}
+
+.point {
+    display: block;
+}
+
+.point-nested {
+    display: block;
+    margin-left: 4rem;
+}
+
+.point::before, .point-nested::before {
+    display: inline-block;
+    content: '';
+
+    height: var(--medLrg);
+    width: var(--medLrg);
+    margin-right: var(--smlMed);
+
+    border-radius: 50%;
+    
+}
+
+.point::before {
+    border: 4px dotted var(--mainColDarkest);
+}
+
+.point-nested::before {
+    border: 4px dashed var(--mainColDark);
+}

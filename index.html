@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/styles/index.css">
+  <script src="./src/app/index.js" defer></script>
+  <title>Learn C and C++</title>
+</head>
+
+<body>
+  <header>
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/groups/2187294837963655/">
+            <svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg"
+              style="box-shadow: 0 0 7px rgba(0, 119, 184, 0.4); background-color: rgb(0, 119, 184, 0.8);"
+              xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px"
+              y="0px" width="29px" height="29px" viewBox="0 0 36 36" xml:space="preserve">
+              <defs>
+              </defs>
+              <rect fill="#3B5998" width="36" height="36" />
+              <path fill="#FFFFFF" d="M30.895,16.535l-0.553,5.23h-4.181v15.176h-6.28V21.766H16.75v-5.23h3.131v-3.149
+          c0-4.254,1.768-6.796,6.796-6.796h4.181v5.23h-2.615c-1.952,0-2.081,0.736-2.081,2.1v2.615H30.895z" />
+            </svg>
+          </a>
+        </li>
+        <li><a href="https://instructionword.com" target="_blank">home &uparrow;</a></li>
+        <li><a href="#intro">1. intro</a></li>
+        <li><a href="#history">2. history</a></li>
+        <li><a href="#highLevel">3. high level langs</a></li>
+        <li><a href="#equipment">4. equipment</a></li>
+        <li><a href="#first">5. first program</a></li>
+        <li><a href="#machinery">6. machinery</a></li>
+        <li><a href="#together">7. putting it all together</a></li>
+        <li><a href="#moreVariables">8. other variables</a></li>
+      </ul>
+        <span class='zoomControls'>zoom</span>
+          <span class="zoomControl" onclick="textSizeAdjust(1)">&plus;</span>
+          <span class="zoomControl" onclick="textSizeAdjust(-1)">&minus;</span>
+      <span style="float: right; transform: rotate(90deg) translate(90px, -20px); text-shadow: 8px 8px 4px #222;">by
+        nick fletcher</span>
+    
+    </div>
+  </header>
+  <div class="container">
+    <div class="article">
+      <div class="atricle article-header">
+        <div class="article article-sub">intro</div>
+        <div class="article article-title">To C & C++</div>
+        <div class="article article-sub">programming</div>
+      </div>
+      <div class="article article-content">
+        <div class="anchor">
+          <a name="intro"> </a>
+          <h3>Introduction</h3>
+        </div>
+        <p>
+          Hello and welcome to my humble introduction to the C and C++ programming languages. If you are reading this, I
+          assume you've decided to learn how to write programs in C and/or C++. But I assume nothing about your current
+          skill level with computers. You can use this text if you are new to computers or new to programming.
+        </p>
+        <p>
+          I <em>do</em> assume that you are using a PC type computer, with Microsoft&#8482; Windows&#8482; but it will
+          be quite easy to convert what you learn here onto a different system, like a Mac, I will not be going in to
+          any detail about how to do this.
+        </p>
+        <p>
+          Learning to program in any computer language is rewarding and fascinating. You get to play with an amazing
+          machine, <i>and</i> exercise your brain at the same time. The brain exercise is automatic, and enjoyable. You
+          don't even realise you're doing it! I intend to show you how to design, test and improve on your own programs.
+          We'll be doing lots of 'hands on' work and experimenting, along with a look at the history and relationship
+          between the two afore mentioned languages. I'll start with an introduction to programming in general, and a
+          bit of the history of computers and programming.
+        </p>
+        <p>
+          It's important to me, that you gain a big picture feel for the topic. The topic is difficult, and takes time
+          to learn. Time and experience. Hence the many practical examples that I have lined up.
+        </p>
+        <p>
+          While it's true that this text is an introductory one, don't feel that you won't learn anything useful! It's
+          my belief that once you have learned the 'basics' of programming, you have learnt most of what can be taught.
+          The rest you can only accomplish through practice. So after reading this short tutorial, you'll have gained
+          some quite advanced skills, and I hope you'll be ready to start using those skills to construct your own
+          useful software.
+        </p>
+        <p>
+          Now for a few conventions. When we create our programs, we'll be using the syntax of C and/or C++. Those
+          languages have <span class="codeRef">keywords</span> that you can use to achieve certain goals. Whenever you
+          see a word in this text that appears like <span class="codeRef">this</span>, you know that I'm refering to a
+          <span class="codeRef">keyword</span>.
+        </p>
+        <p>
+          Finally, we will be dealing with <span class="codeRef">source code</span>. We use plain text to create our C
+          and C++ programs. The plain text itself is known as <strong>source code</strong>. When the time comes to show
+          you a program, or a
+          fragment of a program, I'll place it in a box like this.
+        </p>
+        <code>
+          <pre>
+program source code will go in here</pre>
+        </code>
+        <p>
+          So with that brief intro, we can move on to the interesting stuff!.
+        </p>
+        <div class="atricle article-header">
+          <div class="article article-sub">the</div>
+          <div class="article article-title">history</div>
+          <div class="article article-sub">of programming</div>
+        </div>
+        <div class="anchor">
+          <a name="history"> </a>
+          <h3>In the Beginning</h3>
+        </div>
+        <p>
+          In the very early days of electronic computing, there was no computer programming as we know it today. What
+          passed as computer programming back then, was really, 'hard-wiring' the machine to perform some specific task.
+          That task may have been as simple as adding two numbers and storing the answer, or as complex as calculating
+          the trajectory of an artillery shell. Just <em>how</em> the computer performs the operation is <span
+            class="codeRef">way</span> beyond the scope of this text, but the important thing to note here is the use of
+          re-wiring the computer's internals to allow it to perform different tasks.
+        </p>
+        <p>
+          Re-wiring the internals of the computer for each specific task is very limiting for obvious reasons! It's very
+          slow, and it involves an intimate knowledge of the inner workings of the computer. It didn't take computer
+          scientists long to realise an answer to this problem. They began to generalise the <span
+            class="codeRef">central processing unit</span> or CPU into a machine that could re-wire itself! The CPU is
+          an amazingly complex piece of circuitry that handles input, output, memory and nearly every operation that a
+          computer needs to carry out. The new CPUs could be fed codes that set electronic switches in the CPU to
+          different settings. This effectively re-wired the CPU automatically. The CPUs could handle a set of these
+          codes, and a particular set of codes is now known as an <span class="codeRef"> instruction set </span>. These
+          instructions were fed to the CPU via a series of hand operated switches. Upon receiving a combination of these
+          instructions, the CPU could route the instruction through it's internal wiring and come up with some results.
+        </p>
+        <p>
+          The last major change that the early computer scientists made, was to allow a computer to store a series of
+          instructions in it's memory. The memory of a computer is a place where it can store what's known as <span
+            class="codeRef">binary data</span>. We'll get to that a little bit later, but for now, you just need to
+          understand that a series of instructions for the CPU could be stored in the computer's memory. The computer
+          would know how to find those instructions and it would 'execute' each instruction one at a time until it came
+          to the last instruction in the series. During this process, the computer may have placed other values
+          somewhere else in memory, or read some data from somewhere else in memory.
+        </p>
+        <p>
+          What I've just described, is what happens when you 'run' a program on your computer. Yes, we still do it that
+          way! In case this principle isn't quite clear in your mind, consider this fictional computer, and how it
+          handles a series of instructions. By the way, what I just described is also known as a computer program!
+        </p>
+        <h3>Imaginary Computer Program Execution</h3>
+        <ul>
+          <li>The computer is an M9000 (a completely made up name)</li>
+          <li>The program, or set of instructions, is to add the value of two numbers stored in the computer's memory
+          </li>
+          <li>First step - Tell the CPU where the program is in memory</li>
+          <li>Tell the CPU to start reading the instructions</li>
+          <li>The CPU reads each instruction, one at a time</li>
+          <li>The first instruction tells the CPU to go and get the first number in the sum from it's memory</li>
+          <li>Ok. Now go and fetch the second number. Right!</li>
+          <li>Add the two numbers. Done.</li>
+          <li>Place the result into another part of memory.</li>
+          <li>Any more instructions??? Yes!</li>
+          <li>Show the human what the result is by displaying it on the screen</li>
+          <li>No more instructions...</li>
+        </ul>
+        <p>
+          hat example is an extreme simplification of what really happens. It's meant to be, and I have no intentions of
+          teaching you about that area in any more detail. The example is simply to give you a rough idea of what goes
+          on behind the scenes.
+          <p />
+
+          Now, it was much easier for computer scientists to get the computer to do things using the above method. The
+          instructions are called <span class="codeRef">machine code</span>. Machine code is really all a CPU can
+          understand. And even then, it's hardly an understanding! If you give a CPU an instruction/machine code from
+          it's predefined list of instructions, it blindly carries out the instruction; whatever that might be.
+        </p>
+        <p>
+          Machine codes are just numbers to us. Each number tells the computer to do a predefined task. It's not very
+          easy to remember which machine code (which is a number, remember) carries out a certain operation. If you want
+          to make a program that plays a .wav file, you'd have quite a daunting task ahead of you. First, you'd have to
+          write out <span class="codeRef">exactly</span> what you wanted to do, in a step by step series. Then, you'd
+          need to manually convert what you'd written into machine instructions. That would involve looking up all the
+          code numbers for each instruction and substituting that for what you had written. When you had finished this
+          process, you would have place the 'program' into the computer's memory some how and execute it. Phew..!
+        </p>
+        <p>
+          That was the way of doing things in days gone past... The computer scientists soon tired of this process. The
+          next step they took was to devise a set of codes that they could remember, that corresponded to the
+          meaningless machine codes. The new set of codes were in English (if that was your native tongue!) and they
+          were short little words that carried some meaning. Known as mnemonics, they were used to write programs called
+          assembly programs. This was a very important step in the development of computing as we know it today.
+        </p>
+        <p>
+          In order to use this new set of easy to remember codes, a special program was needed. It's job was to read
+          through all the 'assembly' instructions and replace them with machine code instructions. Then, when that
+          process was finished, the result could be loaded into the computers memory and executed as before.
+        </p>
+        <p>
+          It's important to note that the computer needs to read machine codes. The new 'human readable' codes were only
+          for people. They still needed to be converted back to machine code before the computer would know what to do
+          with them.
+        </p>
+        <p>
+          This discussion is getting very boring, isn't it? You want to learn computer programming in C and C++, and I'm
+          going on and on about some ancient form of computer science! Well, we are going to leave the history of
+          computers for now, but later, after we've done some C and C++, we'll come back to it.
+        </p>
+        <div class="atricle article-header">
+          <div class="article article-sub">high</div>
+          <div class="article article-title">Level</div>
+          <div class="article article-sub">languages</div>
+        </div>
+        <div class="anchor">
+          <a name="highLevel"> </a>
+          <h3>What Are High Level Languages</h3>
+        </div>
+        <p>
+          C and C++ are known as <span class="codeRef">high level </span>languages. High level doesn't mean high powered
+          or requiring extra brain power. It means that instead of using machine code, you can use plain English. 'Low
+          level' is the opposite, of course. Machine code is as low level as you can get! Don't worry too much about
+          high or low level. It's not really important, just a classification.
+
+          You use C and C++ to write programs. You use a text editor to create and save your program. The saved file of
+          your program is called <span class="codeRef">source code</span> and it doesn't do much by itself. If you gave
+          your CPU the source code, it could not understand it! Remember, CPUs only 'understand'
+          machine code, and machine code is just numbers.
+          <p>
+            Below is a sample of what C source code looks like:
+          </p>
+          <code>
+            <pre>
+int x = 10;
+int y = 20;
+int answer = 0;
+answer = x + y;
+printf("\nThe sum of %d and %d is: %d\n",x, y, answer);
+return 0; </pre>
+          </code>
+          <p>
+            You can see where the <span class="codeRef">code</span> part of <span class="codeRef">source code</span>
+            comes from! That is pretty cryptic, but there are some elements that make sense, even if you know nothing at
+            all about programming. We're not worried about what this code does yet, we'll get to that later, I just
+            wanted you to see some source code.
+          </p>
+          <h3>What's the Difference Between C and C++?</h3>
+          <p>
+            The answer to that question is quite complicated! The answer I'll give for now is this:<br />
+            <strong>C++ can do everything that C can do, and more. C++ is a superset of C.</strong>
+          </p>
+          <p>
+            In the next bit, we'll get set up with all the things we need to write programs in C and C++. Everything
+            that's been discussed so far has been background and history. Don't dwell too much on it. I just want you to
+            understand the part about computers only understanding machine code, and if you get that, you're ready to
+            proceed.
+          </p>
+          <div class="article article-sub">what</div>
+          <div class="article article-title">Equipment</div>
+          <div class="article article-sub">do you need?</div>
+          <div class="anchor">
+            <a name="equipment"> </a>
+            <h3>An Overview of a Programming Enviroment</h3>
+          </div>
+          <p>
+            When you write a program in C or C++ or most programming languages, you use a text editor. You save your
+            file as a C or C++ source code file (more on this in a minute) and then what? You need to make that text
+            into machine code for the computer. For this, we use a program called a <span
+              class="codeRef">compiler</span>. The job of the compiler is to read your source code file and convert it
+            to machine
+            code. Well, actually, it's not that simple. There is an extra step there. First of all, the compiler reads
+            your source code file and creates <span class="codeRef">object code</span>. Object code is not
+            far from machine code and it's used as a mid point in the compilation process. Another program is used to
+            finish off the process, called a <span class="codeRef">linker</span>. The linker is told the
+            name of the new Object file and with that information, it creates an <span class="codeRef">executable</span>
+            file. You've seen executable files before. They're the ones with .exe as the file
+            extension. This is the main aim of any 'compiled' computer language. <b>We want to write a program in
+              English, and have some software convert it to machine code. </b>
+          </p>
+          <p>
+            It all sounds very complicated, I know. But it's just a matter of getting used to the environment.
+          </p>
+          <p><strong>QUESTION:</strong> Why is there a step between compiling and making an executable file?</p><br>
+          <strong>ANSWER:</strong> Good question! The answer to this question will become
+          clearer as we proceed. On large projects, source code
+          is usually broken up into more than one source code file.
+          The idea is keep things organised into related groups.
+          If you have compiled your source code files into <span class="codeRef">Object</span>
+          code files, the linker will make the .exe file from those.
+          If there's a mistake in one of the source code files, you
+          would need to correct it, save the file and 're-compile'
+          that file into a new Object file. Then, you can 're-link'
+          all the object files without re-compiling them all. </p>
+        <p>
+          This may not make any sense to you yet, but it will as
+          we go on.
+        </p>
+        <p>
+          The good news for you as the learner programmer is that you don't need to worry about all this talk of linking
+          and compiling! Nowdays, we have programs known as <span class="codeRef"> Intergrated Development
+            Environments</span> or IDE. They consist of a text editor, a compiler and a linker and building an .exe file
+          is as easy as one click!
+        </p>
+        <p>
+          <h3>How to get a compiler and use it:</h3>
+          <tt>
+            For this tutorial, use the online C++ compiler <a href="https://www.onlinegdb.com/online_c++_compiler"
+              target="_blank">HERE &uparrow;</a>. <br><br>
+            After you've finished this tutorial, I recommend using <strong>VS Code</strong>. You can download it free
+            from <a href="https://code.visualstudio.com/" target="_blank">HERE &uparrow;</a>. Once installed, add a
+            package called <strong>Code Runner</strong>. From there, all you'll have to do is press
+            <span class="js-class">CTRL</span><span class="js-class">ALT</span><span class="js-class">N</span> to
+            automatically compile and launch your code. You may be asked to install additional dependencies.
+          </tt>
+        </p>
+        <p>
+          Open the online compiler and type in the following code:
+        </p>
+        <code>
+            <pre>
+#include &lt;iostream>
+
+int main(int argc, char* argv[]) {
+  std::cout << "Hello world" << std::endl;
+
+  return 0;
+}
+            </pre>
+          </code>
+        <p>
+          Click on the <span class="codeRef">RUN</span> button or press <span class="js-class">F9</span> to compile,
+          link and execute the program. You'll see the output in the window under the code. We'll do the same steps for
+          every example in this tutorial, so please refer back here if you forgot the procedure.</p>
+        </p>
+        That's it for this section, next we'll look at what that code means, and add some of our own!
+        </p>
+        <div class="atricle article-header">
+          <div class="article article-sub">your</div>
+          <div class="article article-title">First</div>
+          <div class="article article-sub">program</div>
+        </div>
+        <div class="anchor">
+          <a name="first"> </a>
+          <h3>Examining Your First Program</h3>
+        </div>
+        <p>
+          Have a look at the first code example again:
+        </p>
+        <code>
+            <pre>
+int x = 10;
+int y = 20;
+int answer = 0;
+answer = x + y;
+printf("\nThe sum of %d and %d is: %d\n",x, y, answer);
+return 0; </pre>
+          </code>
+        <p>
+          The first two lines have <span class="codeRef">#include</span> statements. Before the compiler reads this
+          source code, another part of the compiler takes a look at the code. Called the <span
+            class="codeRef">Pre-processor</span> it's job is to prepare the source code for the compiler. The
+          Pre-processor is only interested in the hash '#' symbol. If any words in the source file begin with the hash
+          symbol, they are meant for the Pre-processor. The technical term for these kinds of "hash prepended" words is
+          <span class="codeRef">Pre-processor directive</span>. It's juts like it sounds. A Pre-processor directive
+          tells the Pre-processor to do something, and in the case of <span class="codeRef">#include
+            &ltiostream&gt</span> and <span class="codeRef">#include &ltstdio.h&gt</span> we are telling the
+          Pre-processor to look up the files named <span class="codeRef">iostream</span> and <span
+            class="codeRef">stdio.h</span> and place their contents right here in the source file! When the compiler
+          reads the source file after the Pre-processor has finished, it will see all the text from the included files
+          where the <span class="codeRef">#include</span> directive used to be. That's enough about <span
+            class="codeRef">#include</span> for now, let's look at the rest of the source code.
+        </p>
+        <p>
+
+          Then we have, <span class="codeRef">int main(int argc, char *argv[])</span>. Every C or C++ program is made
+          from <span class="codeRef">functions</span>. Functions are blocks of source code that are designed to perform
+          specific
+          jobs. We aren't going to look at how functions work in this part of the tutorial, that will be explained
+          later. For now, just remember that <span class="codeRef">int main(int argc, char *argv[])</span> states that
+          this program's <span class="codeRef">main</span> function starts here. Every C and C++ program needs a <span
+            class="codeRef">main</span> function. It's the point where your program begins execution. After the word
+          'main' is an opening bracket ' ( ' and some strange text! The strange text is actually optional, and I'll
+          explain what it means later. There is a closing bracket for the opening bracket and then, an opening brace
+          '{'.
+        </p>
+        <p>
+          If you look at the end of the source code 'listing', you'll find a closing brace to go with the opening brace.
+          These two braces <i>enclose</i> any source code that comes between them into what's called a <span
+            class="codeRef">block</span> in programming speak. This <span class="codeRef">block</span> <i>belongs</i> to
+          the function <i>main</i>. Later, we'll see other code that can own a block of code.
+          <p />
+          Take a minute to study the structure of this source code. There's no need to try and work out what it does,
+          just have a look at how it is formed on the page.
+        </p>
+        <p>
+          There are no rules as to how you must set out a program, but there are common conventions to follow. You can
+          pretty much put things where ever you want though! Inside the <span class="codeRef">main()</span> <i>block</i>
+          we have two lines of code. The first item is another <i>function</i>, and you can tell because of the
+          parenthesis after the name, <span class="codeRef">system()</span>. Within this functions parenthisis, is
+          different text to <span class="codeRef">main()</span>. And this function seemingly has no 'block' associated
+          with it! Well, let's move on...
+        </p>
+        <p>
+          After the function named <span class="codeRef">system</span> there is a semi-colon ' ; '. This is how you
+          indicate to C/C++ that a <i>statement</i> ends. A <i>statement</i>??? What <i>is</i> a 'statement'? Quite
+          simply, a statement is what you are telling C/C++ to do. Your whole program consists of nothing more than
+          statements. Each statement ends with a semi colon ' ; '. The exception to this rule is the 'block' I spoke of
+          earlier. Blocks are really seen as one statement to the C/C++ compiler. A block does not need a semi colon
+          after it.
+          <p />
+          The second statement within the block of code controlled by main is <span class="codeRef">return 0; </span>.
+          After that statement, we come to the closing brace for the <i>main</i> function itself. You don't need to know
+          what <i>any</i> of these statements or functions are used for yet! We aren't interested in those things yet. I
+          want to show you a few things before we go any further. Actually, before I show you those things, I want to
+          run through how to make an executable file with you once again. So here's what happens:
+        </p>
+        <p>
+          <ul>
+            <li>Type code into an editor (in this case it's the online C++ compiler</li>
+            <li>You type in the C/C++ code as plain text. This is called a 'source file'</li>
+            <li>You check over your source file for any typo's or other mistakes</li>
+            <li>You tell the IDE software to 'compile' your source code</li>
+            <li>Before the compiler runs, the <i>pre-processor</i> looks for any hash symbols '#'</li>
+            <li>If the pre-processor finds any hash symbols, it may replace that whole line with something else</li>
+            <li>Now the compiler looks at the source code</li>
+            <li>The compiler 'reads' your source code and converts the whole file into an <span class="codeRef">object
+                file</span></li>
+            <li>You'll have one object file for each source code file</li>
+            <li>When the object file(s) have been made, the IDE software calls in the <span
+                class="codeRef">linker</span>
+            </li>
+            <li>The linker organises the object file(s) into an executable (.exe) file that can be run in Windows or DOS
+            </li>
+          </ul>
+        </p>
+        <p>
+          <ul class="qa">
+            <li>How can I be sure that I have no mistakes in my source code?<ul>
+                <li>You can't always be sure.
+                  Especially with large amounts of source code.
+                  The compiler will 'flag' any errors it finds, and
+                  the linker will not be called until there are no errors.
+                  You will get a list of any errors and
+                  on which line they occurred!</li>
+              </ul>
+            </li>
+            </li>
+            <li>What is the point of using ' ; ' ?<ul>
+                <li>The thing with C/C++ is
+                  that it's 'free formed'.
+                  Spaces do not affect the
+                  meaning of the source code.
+                  Just hitting &ltENTER&gt to
+                  start a newline, doesn't
+                  tell the compiler that the
+                  statement is finished.
+                  You need ' ; ' to end a
+                  statement.</li>
+              </ul>
+            </li>
+            </li>
+            <li>Can I use Word?<ul>
+                <li>Yes. You can use Word,
+                  but you must save your
+                  source code with a
+                  .txt extension.
+                  Sometimes, word processors
+                  insert formatting characters
+                  into a document.
+                  These characters have no
+                  meaning to a C/C++ compiler,
+                  and will probably cause an error.</li>
+              </ul>
+            </li>
+            </li>
+            <li>Are we looking at C or C++ now?<ul>
+                <li>What I've shown so far
+                  is both. Remember
+                  at the start, I said
+                  that C++ is a 'superset'
+                  of C? Well, that means
+                  that C++ can do everything
+                  that C can do, but more.
+                  What you've seen so far
+                  has not ventured out of
+                  the realms of C, so
+                  it could also be called
+                  C++!
+                  (the 'using namespace' stuff
+                  is pure C++)</li>
+              </ul>
+        </p>
+        <p>
+          So what have we seen so far? You've seen your first real C/C++ program listing, but it's really just a
+          'template'. If you compiled and linked this program, it would have no <span class="codeRef">output</span>.
+          <p />
+          I'm sure you want to see what happens when we try to compile and link this project, right? But first, let's
+          add some statements to it that'll produce some output.
+        </p>
+        <div class="article article-header">
+          <div class="article article-sub">the</div>
+          <div class="article article-title">Machinery</div>
+          <div class="article article-sub">of programming</div>
+        </div>
+        <div class="anchor">
+          <a name="machinery"> </a>
+          <h3>The Machinery</h3>
+        </div>
+        <p>
+          You've read a lot so far. You've seen one useless program! Well, this C/C++ programming gets going really
+          quickly once you overcome some initial hurdles. And in my opinion, the hardest part is compiling and linking
+          your first program from scratch.
+        </p>
+        <p>
+          Well, we've done that, now let's get our teeth into some real programming and try to solve some real life
+          programming problems! To avoid confusion, I'm going to stick to pure C++ from now on. I will provide a section
+          every now and then to show how the same thing can be done using pure C programming, but I'll make that very
+          clear.
+        </p>
+        <p>
+          When you program in a language like C++, you are usually trying to solve a problem, or get the computer to
+          perform a mundane task for you. C++, as we have seen in previous chapters, is not a computer language, but a
+          person language used as an intermediate point between humans and machines. When you create a C++ source file
+          and compile, link and run it, you are really just converting your C++ code into machine code, so the computer
+          can understand you.
+        </p>
+        <p>
+          You'll hear the term <i>abstraction</i> quite often in any type of programming tutorial/book, but it's usually
+          reserved for something called <i>Object Orientated Programming</i> or OOP. I'm going to use that term quite
+          often right now, but just to describe conventional programming.
+        </p>
+        <p>
+          The process of programming is really a process of abstraction. Abstraction, to me, is really a form of
+          modeling something, so you can deal with it in a different environment. For example. Your friend runs a small
+          business, and he wants you to write a program to help him work out his payroll tax. The first thing you would
+          have to do is 'abstract' the payroll and many things associated with it, such as money, employees and the tax
+          system. This may not be a good example, because I know nothing at all about payroll tax... But at least I'll
+          be forced to keep the example simple!
+        </p>
+        <p>
+          Getting back to the problem at hand. You decide that your program will need a way of 'remembering' how much
+          each employee earnt in a pay-week. Also, you'd like to be able to deal with empoyees one at a time, whilst
+          saving their details to a file when they have been processed.
+        </p>
+        <p>
+          This is a very easy problem to solve in C++. We can store information like numbers and letters in little
+          'boxes' called <i>variables</i>. These so called variables are not really 'boxes' of course, but a place
+          inside the computer's memory that we have given a meaningful name to. Think of the computer memory like a vast
+          line of letterboxes. There are billions of letterboxes, in one big line, numbered from 0 to the total amount
+          -1. In our program, we don't need billions of letterboxes to hold just a couple of values, we only want one
+          for the weekly earnings and one to represent each employee. We might end up needing one hundred or so.
+        </p>
+        <p>
+          Now an interesting problem arises here. The line of letterboxes is used by the whole computer system,
+          including your operating system. I won't beat around the bush... It's RAM that we're talking about! Anyway,
+          those letterboxes (from now on I'll call them memory addresses) are used by everything currently running on
+          the computer. So if our program needs to use a memory address to store it's values, it has to ask the
+          operating system for an available memory address. This address will be quite random as you could imagine. But,
+          we get our memory address, and it's a big number... Let's say it's the number 1,000,000. Now that's an easy
+          one to remember isn't it? But I gave us a nice round number, the operating system won't be so nice. We would
+          more likely get something like this, 5,424,522. Now, how many memory addresses did I say we needed? Over
+          100...
+        </p>
+        <p>
+          What if we could alias those memory addresses with a meaningful name that we came up with? That would
+          certainly make life easier! And of course, we can.
+        </p>
+        <p>
+          <h2>Variables</h2>
+          Variables are the something we'll be working with a lot for a while. In fact, you'll never stop using
+          variables as long as you are programming in C or C++. The above example is very simplistic. And it's very
+          detailed also. Some tutorials don't try and explain a bit about what's going on behind the scenes. I believe
+          this makes it harder to learn. So, I'll always try and give a detailed account of how the stuff works, as well
+          as how to use it, if I can.
+        </p>
+        <p>
+          Variables come in many forms. Before I spoke of variables having a value, well, you need certain <i>types </i>
+          of variables to hold certain values. The first 'type' of variable that we'll use is called an <i>int</i>. The
+          <span class="codeRef">int</span> type is used to represent large, whole numbers that have no fractional
+          portion. In other words, <span class="codeRef">ints</span> are unable to represent numbers that have a decimal
+          point. The <span class="codeRef">int</span> 'type' can be <i>signed</i> or <i>unsigned</i>, meaning a 'signed'
+          <span class="codeRef">int</span> can represent negative values. This is all fun, but how can I use any of this
+          in a program??? Well... I'm about to show you!
+        </p>
+        <p>
+          Earlier, it was mentioned that the of naming a memory addresses make it easier to remember them. To be able to
+          do this, you need to come up with a name, and a 'type'. The only 'type' I've shown you so far is the <span
+            class="codeRef">int</span> so I will show you how to make an <span class="codeRef">int</span> variable.
+        </p>
+        <code>
+          <pre>
+int var1;</pre>
+        </code>
+        <p>
+          There. I just named a memory address! The 'type' comes first, then the name. The name can be any combination
+          of standard characters you wish with a few exceptions.
+        </p>
+        <p>
+          In the above example, I first <i>declare</i> the variable to be of 'type' <span class="codeRef">int</span>,
+          giving the name, <span class="codeRef">var1</span>. Then I do something that may cause you quite a few
+          problems down the track. I <i>assign</i> a value to it. The problems will stem from the use of the familiar
+          '=' equals sign. It can become confusing, but in C and C++, the equals sign is known as the <i>assignment
+            operator</i>. Just as it's name implies, it's used to place a value <i>into</i> a variable. The above code
+          <i>does not</i> state "var1 is equal to 300". It states that the value 300 should be moved into the variable,
+          <span class="codeRef">var1</span>. Astute readers will realise that in fact, the statement itself is actually
+          true! If we are placing the value 300 into <span class="codeRef">var1</span>, then it <b><i>is</i></b> equal
+          to 300...
+        </p>
+        <p>
+          The way I would suggest thinking about the above statement is like this. Imagine the whole statement
+          callapsing, with the 300 being absorbed by <span class="codeRef">var1</span> and no longer being visible in
+          the statement. The equals sign dissovles into nothing. That's how the <i>assignment operator</i> works. It
+          moves anything that's on the right of the equals sign, into whatever is on the left of the equals sign.
+        </p>
+        <p>
+          Here, I've added the word 'unsigned' to the declaration. This 'forces' the <span class="codeRef">int</span>
+          'var2' to always have a positive value. It also means that this <span class="codeRef">int</span> can store
+          much larger values than it's 'signed' counterpart. The reasons for this are not important here.
+          <p />
+          If you can understand variables of type <span class="codeRef">int</span>, then you will be able to understand
+          the other types also.
+        </p>
+        <p>
+          The <i>other</i> types are used pretty much the same way, but they can hold different types of values. For
+          instance, consider the type <i class="a">float</i>. The <span class="codeRef">float</span> type is used to
+          store numbers with a decimal point. In computing, this is known as a floating point number. You don't have to
+          only use floats to store numbers with decimal points, but that's what they are designed for.
+        </p>
+        <p>
+          Another commonly used 'type' is the <i class="a">char</i>. The <span class="codeRef">char</span> is used to
+          store single letters, numbers and anything in the ASCII character set. ASCII is an acronym and stands for the
+          American Standard Code for Information Interchange. Basically, it covers all the characters on your keyboard,
+          and some special characters used for formatting like <span class="codeRef">tab</span> and <span
+            class="codeRef">newline</span>. There are 128 ASCII characters, numbered from 0 to 127. We'll see how to use
+          the type <span class="codeRef">char</span> shortly.
+        </p>
+        <p>
+          I've spoken of different variable 'types' being able to hold different values, so what are these values? The
+          first thing to understand is that a computer can only deal with numbers. And in actual fact, it can't even do
+          that. The computer deals with patterns that humans can convert to numbers. This is because computers use
+          electronic signals to control microscopic switches, deep within themselves.
+          <p />
+
+          To make the building of computers easier, they use a different number system to ours. And remember, to a
+          computer, it's not dealing with numbers, just patterns. Put simply, computers a big bunch of switches. They
+          are microscopic, electronic switches, but they're still switches. These switches are just on off switches,
+          like a light switch. So we can have two conditions. On, or Off. Inside the CPU, a value of 5volts or greater
+          is considered 'on' and zero volts is considered to be 'off'. The two 'states', on or off can also be thought
+          of as true or false. We can say that 'off' is an alias for 'false' and 'on' is an alias for 'true'. You may be
+          wondering where this is going? I <i>was</i> discussing variables, and it sounded like we were going to
+          actually start writing programs!
+        </p>
+        <p>
+          Well, I'm explaining this stuff now, so that from now on, you'll have a very good understanding of what you're
+          dealing with. It's easy for me to explain the more difficult concepts, once you know what's going on 'under
+          the hood'. So...
+          <p />
+
+          Getting back to values and numbers, we can look at our own number system. The decimal number system. In the
+          decimal number system, we use the digits 0 to 9 to represents any possible number. There are ten digits in
+          that set of digits, therefore, we can call the decimal number system <i>base ten</i>.
+        </p>
+        <p>
+          When we display our <i>base 10</i> numbers, we use columns. Consider the number 123. This number spans three
+          'columns'.
+          <p>
+            <table>
+              <tr>
+                <td colspan=3>The base ten number system</td>
+              </tr>
+              <tr>
+                <td>hundreds</td>
+                <td>tens</td>
+                <td>units</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+              </tr>
+            </table>
+            <p />
+          </p>
+
+          You can see the familiar columns in this table. What you should note is how the number 123 is broken up into
+          the different columns. The first column can hold the units zero to nine. If we need to display more than the
+          value nine, we 'carry' the value one into the next column. In this case, it's the <i>tens</i> column. The tens
+          column can hold the values zero to 9 also, but each one of those values is 10 times more powerful than the
+          units column to the right. Consider this formula:
+        </p>
+        <p>
+          <i class="a">column value = number in column * ( number base ^ column number)</i>
+        </p>
+        <p>
+          That looks a bit strange, so let's put our example number through that formula.
+
+          The first column we deal with is the rightmost. So we can replace all those words in the formula with these
+          values:</p>
+        <ul>
+          <li>column value is what we wish to find out</li>
+          <li>number in column is 3</li>
+          <li>column number is 0 (the column numbering starts at 0)</li>
+          <li>number base is 10, for decimal</li>
+        </ul>
+        </p>
+        <p>
+          As you may know already, any number to the power of zero is equal to one. So, in this calculation, the value
+          in the column is, three!
+          <p />
+
+          The next column will look like this if we use our formula:
+          <hr>
+          <i>answer = 2 * (10 ^ 1)</i>
+          <hr>
+        </p>
+        <p>
+          And the answer is 20. So we have the numbers 3 and 20. Add them to give 23.
+          Here's the final column:
+
+          <i class="a">answer = 1 * (10 ^ 2)</i>
+
+          <p />
+          And we end up with 100. Add all three column values and we have... 123!
+        </p>
+        <p>
+          I'm definately going somewhere with all this. The magic value here is, the number base. You can change that
+          number to anything you like. In fact, you can see that it doesn't matter which number base we are using, we
+          can always come up with the correct amount.
+        </p>
+        <p>
+          If you think back to the discussion about switches, you'll remember that the switches used inside the computer
+          can have two states. I said that we could give the two states (on or off) an alias of true or false. Why not
+          give them another alias, but this time make the aliases numbers. We can do that, and the two numbers we'll use
+          are 0 and 1. Zero will be false, and 1 will be true, but that's not important for now.
+          <p />
+          If we are only using two digits to represent every number, we could say that we're using a base two number
+          system. Another name for the base two number system is the <i class="a">binary</i> number system. You will
+          have heard of that before I'm sure.
+        </p>
+        <p>
+          The binary number system is no different from the decimal number system, apart from the number of digits
+          available for representing numbers.
+        </p>
+        <p>
+          Binary numbers can look weird at first. Here's one - <span class="codeRef">1111011</span>. The only digits
+          that can be used are 1 and 0. But the interesting thing is, that a computer can't understand 1 and 0. It's
+          electronic. To a computer, a value of 5volts or greater is a 1 and zero volts is a 0. That's all the computer
+          can do. It can present us with a pattern of 1's and 0's and we can interpret that any way we like. You won't
+          often get to see computer output in binary form. And it would make much sense anyway.
+        </p>
+        <p>
+          The point is, we convert the binary information into something useful. Another point is this:<br />
+          <span class="codeRef">It doesn't matter which number system you use, you can still represent any number, and
+            you can convert any number to any number system.</span>
+        </p>
+        <p>
+          So, getting back to our binary number system. Imagine if you had four light switches on a wall. They are all
+          off. That is <span class="codeRef">one</span> combination. Switch the first switch to on. That's a second
+          combination of those four switches.
+        </p>
+        <p>
+          Once you've switched the first switch on, that 'column' has reached it's limit. If the switch was a 10 notch
+          switch, you could switch it anywhere from the 0 notch up to the 9 notch. But, our switch is a two position
+          switch. We can use our four light switches to represent numbers.
+        </p>
+        <table>
+          <tr>
+            <td>switch 4</td>
+            <td>switch 3</td>
+            <td>switch 2</td>
+            <td>switch 1</td>
+          </tr>
+          <tr>
+            <td>--</td>
+            <td>--</td>
+            <td>--</td>
+            <td>--</td>
+          </tr>
+          <tr>
+            <td class="off">off</td>
+            <td class="off">off</td>
+            <td class="off">off</td>
+            <td class="off">off</td>
+          </tr>
+        </table>This is the same as ZERO.
+        <table>
+          <tr>
+            <td>switch 4</td>
+            <td>switch 3</td>
+            <td>switch 2</td>
+            <td>switch 1</td>
+          </tr>
+          <tr>
+            <td>--</td>
+            <td>--</td>
+            <td>--</td>
+            <td class='on'>ON</td>
+          </tr>
+          <tr>
+            <td class="off">off</td>
+            <td class="off">off</td>
+            <td class="off">off</td>
+            <td></td>
+          </tr>
+        </table>This is the same as '1'
+
+        <table>
+          <tr>
+            <td>switch 4</td>
+            <td>switch 3</td>
+            <td>switch 2</td>
+            <td>switch 1</td>
+          </tr>
+          <tr>
+            <td>--</td>
+            <td>--</td>
+            <td class='on'>ON</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="off">off</td>
+            <td class="off">off</td>
+            <td></td>
+            <td class="off">off</td>
+          </tr>
+        </table>This is the same as '2'
+
+        <table>
+          <tr>
+            <td>switch 4</td>
+            <td>switch 3</td>
+            <td>switch 2</td>
+            <td>switch 1</td>
+          </tr>
+          <tr>
+            <td>--</td>
+            <td>--</td>
+            <td class='on'>ON</td>
+            <td class="on">ON</td>
+          </tr>
+          <tr>
+            <td class="off">off</td>
+            <td class="off">off</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        <p>
+          This is the same as '3' in decimal (base 10).
+        </p>
+        <p>
+          You can see that in binary, you have to 'carry' into the next column for any values greater than one! As soon
+          as we have light switch one switched on, we have to switch it off, and 'carry' its value into the next column
+          in order to represent the number two.
+          <p />
+          Consider this table:<br />
+        </p>
+        <table>
+          <tr>
+            <td>column 3</td>
+            <td>column 2</td>
+            <td>column 1</td>
+            <td>column 0</td>
+          </tr>
+          <tr>
+            <td>--</td>
+            <td>--</td>
+            <td class='on'>ONE</td>
+            <td class="on">ONE</td>
+          </tr>
+          <tr>
+            <td class="off">ZERO</td>
+            <td class="off">ZERO</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        <p>
+          It should be clear now, that we can use the formula from before on binary numbers, or any number system. Let's
+          out that original binary number example through the formula:
+        </p>
+        <p>
+          <span class="codeRef">1111011</span>
+        </p>
+        <p>
+          The formula is <span class="codeRef">answer = number in column * (base ^ column number)</span>
+        </p>
+        <p>
+          So we have this for the rightmost digit in the binary number:
+          <p />
+
+          <span class="codeRef">answer = 1 * ( 2 ^ 0)</span>
+        </p>
+        <p>
+          The answer is 1. We'll remember that. Next column is column number 1.
+        </p>
+        <p>
+          <span class="codeRef">answer = 1 * ( 2 ^ 1)</span>
+          <p />
+
+          The anwser is 2 (any number to the power of one is that number). Let's do column number 2. Our current total
+          is (1 + 2 = 3).
+        </p>
+        <p>
+          <span class="codeRef">answer = 0 * ( 2 ^ 2)</span>at's zero. Next one.
+
+          <span class="codeRef">answer = 1 * ( 2 ^ 3)</span>e answer is 8! Add that to the running total and we have 11.
+
+          <span class="codeRef"> 1 * ( 2 ^ 4) = 16</span> + 11 = 27.
+
+          <span class="codeRef">1 * ( 2 ^ 5) = 32</span> + 32 = 59.
+
+          <span class="codeRef">1 * ( 2 ^ 6) = 64</span> + 64 = 123
+        </p>
+        <p>
+          That's enough of all this 'off topic' stuff... There's one last point I'd like to make though. Each column in
+          a binary number is called a <span class="codeRef">bit</span>. A bit is a contraction of the words, <b><span
+              class="codeRef">bi</span></b>nary and digi<b><span class="codeRef">t</span></b>. The number in our example
+          (123) is a 7 bit number. You need at least 7 bits to produce the number 123 in binary form. And the highest
+          number we can make with only seven 'bits' is, 127. That means there are 128 possible combinations of the 'on -
+          off' bits, when we have seven! (Remember, 0 is one of the combinations, hence 127 is the largest number.) When
+          you have eight bits, all in a row, you can call that group a <span class="codeRef">byte</span>. The largest
+          number you can make using eight bits (a byte) is, 255. (256 combinations.)<br />
+          <span class="codeRef">If this doesn't make sense, use the formula as described above. The right most column is
+            numbered 0, then the one to it's left is numbered 1 and so on. You can only have a one or a zero in any of
+            the columns when using binary, so it's quite easy to work out the values for each column.</span>
+        </p>
+        <p>
+          The groupings of 'bits' then go like this:
+          <table>
+            <tr>
+              <td>number of bits?</td>
+              <td>name?</td>
+              <td>value range?</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>byte</td>
+              <td>0 - 255</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>word</td>
+              <td>0 - 65535</td>
+            </tr>
+            <tr>
+              <td>32</td>
+              <td>double word</td>
+              <td>0 - 4billion</td>
+            </tr>
+            <tr>
+              <td>64</td>
+              <td>quad-word</td>
+              <td>0 - lots...!</td>
+            </tr>
+            <tr>
+              <td>1024</td>
+              <td>kilobyte</td>
+              <td>not worth worrying about</td>
+            </tr>
+          </table>
+        </p>
+        <p>
+          It get's a bit silly for anything over a 'double word' and we won't be using anything 'larger' than that. What
+          I hope you understand from all this is what an <span class="codeRef">int</span> actually is. On most modern
+          computers, an <span class="codeRef">int</span> will be 32bits 'wide'. In other words, it will have a line of
+          32 bits, waiting to be set to 1 or 0, to make 4billion different combinations! Instead of talking in 'bits',
+          I'll express sizes in bytes from now on. If you are not sure how many bits are in an amount of bytes, just
+          check the above table.
+        </p>
+        <p>
+          I hope you can see what I mean when I say that different 'types' can hold different values. Have a look at
+          this table:
+          <table>
+            <tr>
+              <td><span class="codeRef">type</span></td>
+              <td><span class="codeRef">number of bytes</span></td>
+              <td><span class="codeRef">value range</span></td>
+            </tr>
+            <tr>
+              <td>bool</td>
+              <td>1 byte</td>
+              <td>true or false (numeric 1 or 0 respectively)</td>
+            </tr>
+            <tr>
+              <td>unsigned char</td>
+              <td>1 byte</td>
+              <td>0 to 255</td>
+            </tr>
+            <tr>
+              <td>signed char</td>
+              <td>1 byte</td>
+              <td> -128 to 127</td>
+            </tr>
+            <tr>
+              <td>unsigned short int</td>
+              <td>2 bytes</td>
+              <td> 0 to 65535</td>
+            </tr>
+            <tr>
+              <td>signed short int</td>
+              <td>2 bytes</td>
+              <td> -32768 to 32767</td>
+            </tr>
+            <tr>
+              <td>signed int</td>
+              <td>4 bytes</td>
+              <td>-2147483648 to 2147483647</td>
+            </tr>
+            <tr>
+              <td>unsigned int</td>
+              <td>4 bytes</td>
+              <td>0 to 4294967295</td>
+            </tr>
+            <tr>
+              <td>signed long int</td>
+              <td>4 bytes</td>
+              <td>-2147483648 to 2147483647</td>
+            </tr>
+            <tr>
+              <td>float</td>
+              <td>4 bytes</td>
+              <td>1.75494e-038 to 3.402823e+038</td>
+            </tr>
+            <tr>
+              <td>double</td>
+              <td>8 bytes</td>
+              <td>2.225074e-308 - to 1.797693e+308</td>
+            </tr>
+            <tr>
+              <td>long double</td>
+              <td>8 bytes</td>
+              <td>2.225074e-308 - to 1.797693e+308</td>
+            </tr>
+          </table>
+        </p>
+        <p>
+          In the above table, you can see all the available 'types' of variables that you can use. We'll see how to use
+          them in the coming pages, but you should refer to the above table if you have trouble remembering all those
+          ranges and 'sizes'. From now on, when I refer to a variables 'size' I am refering to how many bytes it is. And
+          remember, 8 bits make a byte, so you can think of all the bits lined up if that helps.
+        </p>
+        <div class="atricle article-header">
+          <div class="article article-sub">putting</div>
+          <div class="article article-title">It All</div>
+          <div class="article article-sub">together</div>
+        </div>
+        <div class="anchor">
+          <a name="together"> </a>
+          <h3>Putting it all together (finally!)</h3>
+        </div>
+        <p>
+          If the previous explanations seemed excessive, or too long, I'm sorry! But I've seen lots of people start to
+          program without a firm understanding of all that stuff, and they run into problems eventually. I want to
+          remove as much 'fuzziness' as possible. Anyway... Let's do a program.
+        </p>
+        <p>
+          This program will confirm what I have been saying about 'sizes' of variables. We're going to ask C++ to tell
+          us what the size of each type really is. Here is the code, I'll go through it all after you've had a look at
+          it.
+        </p>
+        <code>
+            <pre>
+#include&lt;iostream&gt;
+#include&lt;conio.h&gt;
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+  cout << "The sizes of all the types are as follows:\n\n";
+	cout << "The size of a bool is " << sizeof(unsigned char) << " byte." << endl;
+	cout << "The size of a unsigned char is " << sizeof(unsigned char) << " byte." << endl;
+	cout << "The size of a signed char is " << sizeof(signed char) << " byte." << endl;
+	cout << "The size of an unsigned short int is " << sizeof(unsigned short int) << " bytes." << endl;
+	cout << "The size of a signed short int is " << sizeof(signed short int) << " bytes." << endl;
+	cout << "The size of a signed int is " << sizeof(signed int) << " bytes." << endl;
+	cout << "The size of an unsigned int is " << sizeof(unsigned int) << " bytes." << endl;
+	cout << "The size of a signed long int is " << sizeof(signed long) << " bytes." << endl;
+	cout << "The size of a float is " << sizeof(float) << " bytes." << endl;
+	cout << "The size of a double  is " << sizeof(double) << " bytes." << endl;
+	cout << "The size of a long double is " << sizeof(long double) << " bytes." << endl;
+
+  return 0;
+
+}</pre>
+          </code>
+        <h3>Program Output</h3>
+        <code>
+            <pre>
+The sizes of all the types are as follows
+
+The size of a bool is 1 byte.
+The size of a unsigned char is 1 byte.
+The size of a signed char is 1 byte.
+The size of an unsigned short int is 2 bytes.
+The size of a signed short int is 2 bytes.
+The size of a signed int is 4 bytes.
+The size of an unsigned int is 4 bytes.
+The size of a signed long int is 8 bytes.
+The size of a float is 4 bytes.
+The size of a double  is 8 bytes.
+The size of a long double is 16 bytes.</pre>
+          </code>
+        <p>
+          If you did not get the same results as mine, check that your source code is <i>exactly</i> the same as mine,
+          and you have no typos or other errors. If you are having problems after making those checks, you should ask
+          for help online. Show the code you typed in, what you've tried and the error messages, if any.
+        </p>
+        <p>
+          This is quite a long program compared to what you're used to, but we can break it down into understandable
+          parts. You can see that the first two lines have the <tt>#include</tt> statements for the pre-processor to
+          read. Remember that the inside those angled brackets are the filenames of files that contain some
+          pre-written source code. Those first two lines will be completely replaced by the contents of each of the
+          two named files. (I'll explain what's actually <i>in</i> those files later on.)
+        </p>
+        <p>
+          Moving right along, we see that statement <tt>using namespace std;</tt> that's at the top of all our
+          programs so far. To put it very simply, you can tell C++ that you wish to define a list of variable names
+          that belong to a group. In this case, the name of the group is "std". The reason for doing this will become
+          clear later on, so let's not worry about this line at all for now.
+        </p>
+        Next comes the 'entry point' for our program. It's a function named <tt>main</tt>, and we know it's a function
+        because of the '( int argc, char *argv[] )' following it. It looks like an <tt>int</tt> is being 'declared'
+        inside those parenthesis doesn't it? (int argc...) That's not exactly what's going on there, and you'll have
+        to wait until I discuss functions in the next section. It would be confusing to you if I tried to explain
+        functions at this stage.
+        <p />
+
+        The opening brace, as discussed earlier, signifies the start of a <i>block</i> of code. By that, it's meant
+        that all of the code between curly braces is grouped together. In this case, the grouping/block of source code
+        'belongs' to the function, 'main'. This will make much more sense soon.</p>
+        <p>
+          The strange looking word <tt>cout</tt> pronounced "see-out", or "sout", is the first statement in this block.
+          Two 'less than' (&lt;&lt;) symbols come immediatly after <tt>cout &lt;&lt; </tt>. C++ uses 'cout' as a way of
+          producing
+          output to the screen. When you see <tt>cout &lt;&lt; "" </tt>, whatever you put within the quotes, will be
+          'output' to the screen as text. Let's try a quick example:
+        </p>
+        <code>
+            <pre>
+#include&lt;iostream&gt;
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+  cout &lt;< "This will produce some output!\n\n";
+
+  return 0;
+
+}</pre>
+          </code>
+        <p>
+          Have a play around with that. Change the text within the quotes, and see what happens. The backslash followed
+          by the n, <tt>\n</tt> makes the program print a newline. So this program prints two newlines after the
+          message. Remember to re-compile and link the source code after each change you make, otherwise, you'll still
+          be using the old version and you won't see your changes.
+        </p>
+        <p>
+          The statement, <tt>return 0;</tt> is the last statement in the entire program. It signifies the 'end' of the
+          'main()' block of code. It's like telling the operating system that our program has finished, and it can go
+          back to whatever it was doing before it ran our program!
+          <p />
+
+          It's time for another program. Feeling confident? Good! For this program, we are going to work with variables.
+          We'll see some of the ways of using them in mathematical expressions and some ways of printing out the results
+          of those expressions. So here's the code for our next program:
+        </p>
+        <code>
+          <pre>
+#include&lt;iostream&gt;
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+  int first_var;
+  int second_var;
+  int third_var = 0;
+  first_var = 10;
+  second_var = 20;  
+  //this is a comment. it has no effect on the program!
+  //comments start with // and end when the line ends
+  //you can use comments to help you remember what
+  //you were trying to do with your source code.  
+  //let's add first_var and second_var and store the answer in 
+  //third_var 
+  third_var = first_var + second_var;	
+
+  return 0;
+}</pre>
+        </code>
+        <p>
+          This program <i class="a">declares</i> two variables, <tt>first_var</tt> and <tt>second_var</tt>. They are
+          'declared' to be of type <tt>int</tt>. Then it 'declares' <tt>third_var</tt> <i>and</i> <i
+            class="a">initialises</i> it in one go. Initialising a variable is the same as <i class="a">assigning</i> a
+          value to it, only it's done at the time the declaration is made. The first time we <i class="a">assign</i> a
+          value to a variable, we say that we <i class="a">define</i> that variable. You'll need to remember and
+          understand the difference between <i class="a">declare</i> and <i class="a">define</i>, as it's an important
+          part of any programming.
+        </p>
+        <p>
+          Here's another way of looking at the two. You can <i class="a">declare</i> an <tt>int</tt>. Let's call our new
+          <tt>int</tt> "the_int". We make the <i class="a">declaration</i> like this:
+        </p>
+        <code>
+          <pre>
+int the_int;</pre>
+        </code>
+        <p>
+          The new variable has no value yet. Well, it <i>might</i> have a value of zero, but it may not! The only way to
+          be sure of the value is to <i class="a">define</i> it. We can do that like this:
+        </p>
+        <code>
+          <pre>
+int the_int;		//the declaration
+the_int = 10;		//the definition</pre>
+        </code>
+        <p>
+          The variable "the_int", now has a value of 10. We can use this variable in mathematical operations, or
+          anywhere we wish and it will be the same as writing the number 10 in it's place.
+        </p>
+        <p>
+          Getting back to 'example3'... Did you compile and link it, then try it out? That program is not very useful
+          yet. It has no output! Let's fix that now.
+        </p>
+        <code>
+          <pre>
+#include&lt;iostream&gt;
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+  int first_var; //declare an int variable
+	int second_var;	//declare another int variable
+
+	int third_var = 0; //declare and initialise/define
+
+	first_var = 10; //now we define the first two variables
+	second_var = 20;	
+
+	third_var = first_var + second_var;		
+	//we have added the first two variables together, then we
+	//place the result of that addition into our third variable
+	//let's print the result
+
+	cout << third_var << endl;
+
+  return 0;
+}</pre>
+        </code>
+        <p>
+          I hope that worked! I have added <tt>cout << third_var << endl; </tt> to our previous example. This provides
+              the program with some output text to inform the user of the answer to our little sum.
+              <p />
+
+              This program works fine, but it's not as informative as it could be... We should let the user see how we
+              arrived at the answer '30'. That's easy, watch this!
+        </p>
+        <code>
+          <pre>
+#include&lt;iostream&gt;
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+  int first_var; //declare an int variable
+  int second_var; //declare another int variable
+
+  int third_var = 0; //declare and initialise/define
+
+  first_var = 10; //now we define the first two variables
+  second_var = 20;	
+
+  third_var = first_var + second_var;		
+  //we have added the first two variables together, then we
+  //place the result of that addition into our third variable
+  //let's print the result
+
+  cout << "The sum of 10 and 20 is equal to " << third_var << endl;
+
+  return 0;
+}
+            </pre>
+        </code>
+        <p>
+          Right. That looks better I think. What's that <tt>endl</tt> at the end of the line? That's just C++ for
+          'newline'. Try this one now:
+        </p>
+        <code>
+          <pre>
+#include&lt;iostream&gt;
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+  int first_var; //declare an int variable
+  int second_var; //declare another int variable
+
+  int third_var = 0; //declare and initialise/define
+
+  first_var 	= 10; //now we define the first two variables
+  second_var	= 20;	
+
+  third_var = first_var + second_var;		
+  //we have added the first two variables together, then we
+  //place the result of that addition into our third variable
+  //let's print the result
+
+  cout << "The sum of 10 and 20 is equal to " << first_var + second_var << endl;
+
+  return 0;
+}
+            </pre>
+        </code>
+        <p>
+          The output is the same! That's interesting. What you are seeing in that output is really how C++ sees
+          <tt>first_var + second_var;</tt>. That's called an <i class="a">expression</i>. Here's the definition of what
+          'expression' means in C++ and C:
+          <i class="a">An expression is any statement that has a value.</i>
+        </p>
+        <p>
+          That definition is one of the most important things to learn in C and C++ programming. The best way to
+          understand exactly what that means is to 'work out' which single value will be left in place of the
+          statement(s) when all of the operations have been performed. It's not just for equations like the one above
+          either. An expression is treated by C/C++ as ONE value. That is how I was able to include <tt>
+            << first_var + second_var << endl;</tt> in the 'cout' statement. As the compiler was readind my source code,
+              it came across the expression <tt>
+                << first_var + second_var << endl;</tt>. It then 'condensed' that expression into the final answer, 30.
+                  We'll be using what we have learnt here EXTENSIVELY!!!
+        </p>
+        <p>
+          I want you to now practice with your own alterations to the above code. Change the values of the variables,
+          change the output quote. Change the program to something that won't work and see which errors the compiler
+          'reports'. Try leaving out the first two lines for including those extra files. Can the program function
+          without those? Find out!
+        </p>
+        <p>
+          In the next section, we are going to look at how to use some different types of variables. So far, we have
+          only seen the 'int' in action! The 'int' is by far the most often used 'type' but you'll need to know what the
+          others are used for. When you've seen that, we can have a look at functions. That's where the usefulness of
+          programming really starts, but you need to learn just a little bit more first, so turn the page and let's get
+          into it!
+        </p>
+        <div class="article article-header">
+          <div class="article article-sub">more</div>
+          <div class="article article-title">On</div>
+          <div class="article article-sub">variables</div>
+        </div>
+        <div class="anchor">
+          <a name="moreVariables"> </a>
+          <h3>Other Types of Variables</h3>
+        </div>
+        <p>
+          You have seen the names of the other 'types', but you may be wondering how they can be used in programs. Well,
+          here's an example to start us off:
+        </p>
+        <code>
+          <pre>
+#include&lt;iostream&gt;
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+  int x = 5;
+  int y = 10; 
+  cout << y << " divided by " << x << " equals " << y/x << endl;
+
+  return 0;
+}</pre>
+        </code>
+        <p>
+          Well, that works ok. Now in the same project, add this and run it again:
+        </p>
+        <code>
+          <pre>
+#include&lt;iostream&gt;
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+  int x = 5;
+  int y = 10;
+
+  cout << y << " divided by " << x << " equals " << y/x << endl;
+
+  int i = 50;
+  int j = 13;
+
+  cout << i << " divided by " << j << " equals " << i/j << endl;
+
+  return 0;
+}</pre>
+        </code>
+        <p>
+          Close enough? No... It's chopped off the decimal portion! You'll remember a while back I said that 'int' types
+          can't handle numbers with a decimal point portion? Well, it's true! But if you force them into a tight spot
+          where the answer obviously has a fractional part, they'll just ignore it and report a 'truncated' answer.
+          Again, keeping the same project and source file, just make these changes:
+        </p>
+        <code>
+          <pre>
+#include&lt;iostream&gt;
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+  int x = 5;
+  int y = 10;
+
+  cout << y << " divided by " << x << " equals " << y/x << endl;
+
+  float i = 50;
+  float j = 13;
+
+  cout << i << " divided by " << j << " equals " << i/j << endl;
+
+  return 0;
+}</pre>
+        </code>
+        <p>
+          Success! <i>That's</i> why we have the type <i class="a">float</i>. As with all of these examples, I want you
+          to make your own changes and see what happens. Think of something that you'd want the program to do
+          differently, then try to implement it. If it doesn't work first time, it's ok. You will learn when you make
+          mistakes, and when your changes work the first time.
+        </p>
+        <p>
+          Apart from being able to hold bigger or smaller numbers, all of the int variants like 'short', 'long' and
+          signed and unsigned can be use pretty much the same way. There are two other 'types' that are important to us,
+          that are used in different ways. They are the <i class="a">char</i> and the <i class="a">bool</i>. The 'char'
+          is for holding ASCII characters. ASCII characters are a special 'set' of numbers, letters and symbols that are
+          used on nearly every computer around the world. There are 128 ASCII characters and this program will display
+          them all!
+        </p>
+        <code>
+          <pre>
+#include&lt;iostream&gt;
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+  
+  int i; //declare variable i
+  char c = 0; 
+      
+  for(i = 0; i < 128; i++)
+  {
+    cout << "ASCII code " << i << " = " << c;
+    if(i % 4== 0)
+      cout << "\n";
+    c++;
+  }	
+
+  return 0;
+}</pre>
+        </code>
+        <p>
+          Whoa! Don't worry, you're not expected to understand all that yet. I just want you to look at the output of
+          the program. It will display all 128 ASCII codes and their character values. The last code is 127, but
+          counting starts from 0, so there really are 128! Does that number sound familiar? No? Well, if you think back
+          to our binary studies from before, you may recall that a '7 bit' number can produce the numbers from 0 to 127,
+          or 128 possible combinations of those 7 bits. As you will have seen in my table of 'types' a couple of pages
+          back, you'll also know that the type 'char' is one byte in 'size'. One byte is 8 bits, so why are we talking
+          about 7? The ASCII character set only has 128 different characters, so it only needs a 7 bit number, but for
+          reasons which I won't go into quite yet, you use the 8 bit char to store ASCII characters. (If you're really
+          dying to know why, a clue is, it has something to do with signed and unsigned)<br />
+          The line of code, <tt>cout << "ASCII code " << i << " = " << c;</tt>, is where we do all our displaying to the
+              screen. You can see that when we want to write some text, we place it inside double quotes ("), but when
+              we want to show the value of a variable, we don't put any quotes around it, and we need to use extra <<.
+                The basic rule of using <tt>cout</tt> is that if you are displaying 'quoted' text, then values stored in
+          a variable, you need to place << between the two. Think of << as glue holding the parts of the output
+            together. </p>
+            <p>
+              Can you spot something strange about this output? Ok... I'll tell you what it is. Without explaning all
+              that new code, I'll tell you that I made part of the program repeat 128 times. Each time it repeats, it
+              adds 1 to the value of the variable 'c'. It also does the same to the value of the variable ' i '. You can
+              see this in the output, or can you??? You can for ' i ', but ' c ' does something else! I didn't ask the
+              program to print the ASCII character value of ' c '. I only asked the program to print it's value, the
+              same way I asked it to print the value of ' i '.
+            </p>
+            <tt>cout << "ASCII code " << i << " = " << <span class="codeRef">c</span>;</tt>
+            <p>
+              That's what 'chars' do. They automatically convert any numeric value they are storing into the equivalent
+              ASCII character code value. By ASCII code value, I mean the character associated with the code number
+            </p>
+            <p>
+              On to the <i class="a">bool</i>. Type 'bool' simply holds either 'true' or 'false'. And that's all. The
+              only trick is, if you ask a bool to tell you which value it holds, it will give you a one or a zero. Let's
+              examine th behaviour of bools:
+            </p>
+            <code>
+              <pre>
+#include&lt;iostream&gt;
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+  bool answer1;
+  bool answer2;
+
+  answer1 = true;
+  answer2 = false;
+
+  cout << "It is true that in computer terms, true is the same as " << answer1 << endl << endl;
+  
+  cout << "Going with that logic, is it also true that false is the same as " << answer2 << "? I guess so!\n\n";
+
+  return 0;
+}</pre>
+            </code>
+            <p>
+              Now, I hope all this is starting to look familiar. It is to me! What we have here is an example of the
+              type, 'bool'. Why would you ever need to know true or false? Well... It's probably <i>the</i> most import
+              part of any programming language. We'll learn exactly why later, but for now, just know that your program
+              can have 'branches' or 'forks in the road'. You can ask the computer questions and it can answer you with
+              a true or false answer. You can chose to do two different things based on the computer's answer. But more
+              about this soon!
+            </p>
+            <p>
+              We are going along nicely now. I can feel a slight breeze. Next up, we look at what functions are, how
+              they work and how to use them. Maybe more importantly, <i>why</i> you use them.
+            </p>
+      </div> <!-- END ARTICLE-CONTENT DIV-->
+    </div> <!-- END ARTICLE DIV-->
+  </div>
+</body>
+
+</html>
